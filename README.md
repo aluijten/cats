@@ -5,3 +5,4 @@ Python class Beispiele
 Auto.py
 Hund.py
 Cats.py
+sudoku.py
