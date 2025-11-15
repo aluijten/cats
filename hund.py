@@ -57,6 +57,12 @@ class Buch():
     def __str__(self):
         return self.titel
     
+    def __add__(self, other):
+        return self.anzahl_seiten + other.anzahl_seiten
+    
+    def __eq__(self, other):
+        return self.autor == other.autor and self.titel == other.titel
+    
     def ueber_tausend_seiten(self):
         return self.anzahl_seiten > 1000
 
@@ -79,7 +85,13 @@ titel2= "Harry Potter und der Halbblutprinz"
 autor = "J.K. Rowling"
 
 feuerkelch = Buch(titel1, autor, 767)
+feuerkelch2 = Buch(titel1, autor, 167)
 halbblutprinz = Buch(titel2, autor, 767)
 
 print("Seitenanzahl:",len(feuerkelch))
 print(str(feuerkelch))
+print(feuerkelch + halbblutprinz)
+print(feuerkelch == feuerkelch2)
+print(type(5))
+print(type("a, b"))
+print(type([1, 2]))
