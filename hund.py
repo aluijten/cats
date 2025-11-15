@@ -44,6 +44,22 @@ class Katze(Haustier):
         self.hunger = True
         print(self.name,"Kratz!",self.print_zufriedenheit())
 
+class Buch():
+
+    def __init__(self, titel, autor, anzahl_seiten):
+        self.titel = titel
+        self.autor = autor
+        self.anzahl_seiten = anzahl_seiten
+    
+    def __len__(self):
+        return self.anzahl_seiten
+    
+    def __str__(self):
+        return self.titel
+    
+    def ueber_tausend_seiten(self):
+        return self.anzahl_seiten > 1000
+
 
 
 ########## MAIN ################
@@ -57,3 +73,13 @@ hund1.stoeckchen_holen()
 katze1.kratzbaum_kratzen()
 hund1.essen()
 katze1.essen()
+
+titel1= "Harry Potter und der Feuerkelch"
+titel2= "Harry Potter und der Halbblutprinz"
+autor = "J.K. Rowling"
+
+feuerkelch = Buch(titel1, autor, 767)
+halbblutprinz = Buch(titel2, autor, 767)
+
+print("Seitenanzahl:",len(feuerkelch))
+print(str(feuerkelch))
