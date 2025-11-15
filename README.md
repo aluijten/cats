@@ -1,7 +1,7 @@
-#Cats Projekt
 15.11.2025
-# first change
-#
-#
-#
-#
+
+Python class Beispiele
+
+Auto.py
+Hund.py
+Cats.py
